@@ -28,8 +28,8 @@ class YellowPageSpider(scrapy.Spider):
         _data = data.copy()
         _data['detail_url'] = self.hostname+_data['detail_url']
         _data['categories'] = _data['categories'].split(',') if _data['categories'] else None
-        _data['address']['street'] = _data['address']['street'].strip() if _data['address']['street'] else ''
-        _data['address']['locality'] = _data['address']['locality'].strip() if _data['address']['locality'] else ''
+        _data['address_street'] = _data['address_street'].strip() if _data['address_street'] else ''
+        _data['address_locality'] = _data['address_locality'].strip() if _data['address_locality'] else ''
         # _data['address']['postal_code'] = _data['address']['postal_code'].strip()
         return _data
 
